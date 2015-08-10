@@ -1,11 +1,11 @@
 #include "backpropagation.h"
 
 int backprop() {
-	int N_LAYERS = 3;
-	int NEURONS_PER_LAYER = 20;
+	int N_LAYERS = 2;
+	int NEURONS_PER_LAYER = 5;
 	int N_INPUTS = 3;
-	int N_OUTPUTS = 1;
-	double LEARNING_RATE = 1;
+	int N_OUTPUTS = 2;
+	double LEARNING_RATE = 10;
 	
 	BackPropagation sim = *new BackPropagation(N_LAYERS, NEURONS_PER_LAYER, N_INPUTS, N_OUTPUTS, LEARNING_RATE);
 	
@@ -14,8 +14,8 @@ int backprop() {
 	double in3[3] = { 1, 0, 1 };
 	double in4[3] = { 1, 1, 1 };
 	
-	double out1[1] = { 0 };
-	double out2[1] = { 1 };
+	double out1[2] = { 0, 1 };
+	double out2[2] = { 1, 0 };
 	
 	Matrix m_in1 = *new Matrix(N_INPUTS, 1, in1);
 	Matrix m_in2 = *new Matrix(N_INPUTS, 1, in2);
@@ -31,7 +31,7 @@ int backprop() {
 	sim.eval(m_in3).print();
 	sim.eval(m_in4).print();
 	
-	int N = 10000;
+	int N = 1000;
 	for (int i = 0; i < N; i++) {
 		sim.train(m_in1, m_out1);
 		sim.train(m_in2, m_out2);

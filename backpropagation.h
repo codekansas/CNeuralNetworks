@@ -4,8 +4,12 @@
 
 const double e = 2.7182818284;
 
+// Some thresholding functions
 #define f(x) (1.0 / (1.0 + pow(e, -x)))
-#define df(x) (f(x) * (1 - f(x)))
+#define df(x) (x * (1 - x))
+
+// #define f(x) ((1.0 + tanh(x)) / 2.0)
+// #define df(x) ((1.0 - x * x) / 2.0)
 
 class BackPropagation {
 	private:
@@ -29,6 +33,16 @@ Matrix activationFunction(Matrix m) {
 	return n;
 }
 
+Matrix derivActivationFunction(Matrix m) {
+	Matrix n = *new Matrix(m.width, m.height);
+	for (int i = 0; i < m.width; i++) {
+		for (int j = 0; j < m.height; j++) {
+			n.set(i, j, df(m.get(i, j)));
+		}
+	}
+	return n;
+}
+
 Matrix BackPropagation::eval(Matrix m) {
 	for (int i = 0; i < N_LAYERS; i++) {
 		m = activationFunction(m.times(weights[i]).plus(biases[i]));
@@ -47,9 +61,9 @@ void BackPropagation::train(Matrix input, Matrix output) {
 	}
 	
 	// Feed backward
-	deltas[N_LAYERS-1] = output.T().minus(outputs[N_LAYERS-1]).dot(outputs[N_LAYERS-1].times(-1).plus(1).dot(outputs[N_LAYERS-1]));
+	deltas[N_LAYERS-1] = output.minus(outputs[N_LAYERS-1]).dot(derivActivationFunction(outputs[N_LAYERS-1]));
 	for (int i = N_LAYERS - 2; i >= 0; i--) {
-		deltas[i] = deltas[i+1].times(weights[i+1].T()).dot(outputs[i].times(-1).plus(1).dot(outputs[i]));
+		deltas[i] = deltas[i+1].times(weights[i+1].T()).dot(derivActivationFunction(outputs[i]));
 	}
 	
 	// Update weights
@@ -60,7 +74,7 @@ void BackPropagation::train(Matrix input, Matrix output) {
 	
 	// Update biases
 	for (int i = 0; i < N_LAYERS; i++) {
-		biases[i] = biases[i].plus(deltas[i].times(LEARNING_RATE));
+		biases[i] = biases[i].plus(activationFunction(biases[i]).dot(deltas[i]).times(LEARNING_RATE));
 	}
 }
 
