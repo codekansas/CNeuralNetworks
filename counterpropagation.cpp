@@ -57,4 +57,6 @@ int main() {
 	network.eval(m_in2).print();
 	network.eval(m_in3).print();
 	network.eval(m_in4).print();
+    
+    return 0;
 }
