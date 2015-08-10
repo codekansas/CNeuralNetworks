@@ -10,41 +10,51 @@ int main() {
 	
 	// Network parameters
 	int N_INPUTS = 3;
-	int N_KOHONEN = 5;
+	int N_KOHONEN = 500;
 	int N_OUTPUTS = 2;
-	double ALPHA = 0.05;
-	double BETA = 0.05;
+	double ALPHA = 0.5;
+	double BETA = 0.5;
 	
 	// Set up network
-	CounterPropagation* network = new CounterPropagation(N_INPUTS, N_KOHONEN, N_OUTPUTS, ALPHA, BETA);
+	CounterPropagation network = *new CounterPropagation(N_INPUTS, N_KOHONEN, N_OUTPUTS, ALPHA, BETA);
 	
-	// Positive input
-	double pos_in_data[3] = {0, 1, 0};
-	Matrix* pos_in = new Matrix(N_INPUTS, 1, pos_in_data);
+	// Data
+	double in1[3] = { 0, 0, 1 };
+	double in2[3] = { 0, 1, 1 };
+	double in3[3] = { 1, 0, 1 };
+	double in4[3] = { 1, 1,  };
 	
-	// Negative input
-	double neg_in_data[3] = {1, 0, 0};
-	Matrix* neg_in = new Matrix(N_INPUTS, 1, neg_in_data);
+	double out1[1] = { 0 };
+	double out2[1] = { 1 };
 	
-	// Positive output
-	double pos_out_data[2] = {0, 1};
-	Matrix* pos_out = new Matrix(N_OUTPUTS, 1, pos_out_data);
+	Matrix m_in1 = *new Matrix(N_INPUTS, 1, in1);
+	Matrix m_in2 = *new Matrix(N_INPUTS, 1, in2);
+	Matrix m_in3 = *new Matrix(N_INPUTS, 1, in3);
+	Matrix m_in4 = *new Matrix(N_INPUTS, 1, in4);
 	
-	// Negative output
-	double neg_out_data[2] = {1, 0};
-	Matrix* neg_out = new Matrix(N_OUTPUTS, 1, neg_out_data);
+	Matrix m_out1 = *new Matrix(N_OUTPUTS, 1, out1);
+	Matrix m_out2 = *new Matrix(N_OUTPUTS, 1, out2);
 	
-	// Positive training
-	for (int i = 0; i < 1000; i++) {
-		network->train(pos_in, pos_out);
-	}
+	cout << "Before training:" << endl;
+	network.eval(m_in1).print();
+	network.eval(m_in2).print();
+	network.eval(m_in3).print();
+	network.eval(m_in4).print();
 	
-	// Negative training
-	for (int i = 0; i < 1000; i++) {
-		network->train(neg_in, neg_out);
+	int N = 100;
+	for (int i = 0; i < N; i++) {
+		network.train(m_in1, m_out1);
+		network.train(m_in2, m_out2);
+		network.train(m_in3, m_out2);
+		network.train(m_in4, m_out1);
+		network.ALPHA -= ALPHA / (1.1 * N);
+		network.BETA -= BETA / (1.1 * N);
 	}
 	
 	// Test
-	network->eval(pos_in)->print();
-	network->eval(neg_in)->print();
+	cout << "After training:" << endl;
+	network.eval(m_in1).print();
+	network.eval(m_in2).print();
+	network.eval(m_in3).print();
+	network.eval(m_in4).print();
 }
