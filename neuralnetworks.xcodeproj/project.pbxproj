@@ -1,0 +1,283 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D9A7F5921B7C47C400D78916 /* hopfield.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9A7F5901B7C47C400D78916 /* hopfield.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D93CB9C61B7A430A0097646C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D93CB9C81B7A430A0097646C /* neuralnetworks */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = neuralnetworks; sourceTree = BUILT_PRODUCTS_DIR; };
+		D93CB9CB1B7A430A0097646C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D93CB9D91B7A43EA0097646C /* counterpropagation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = counterpropagation.cpp; sourceTree = "<group>"; };
+		D93CB9DA1B7A43EA0097646C /* counterpropagation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = counterpropagation.h; sourceTree = "<group>"; };
+		D93CB9DB1B7A43F30097646C /* backpropagation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = backpropagation.cpp; sourceTree = "<group>"; };
+		D93CB9DC1B7A43F30097646C /* backpropagation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = backpropagation.h; sourceTree = "<group>"; };
+		D93CB9DD1B7A43FF0097646C /* matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = matrix.h; sourceTree = "<group>"; };
+		D93CB9E81B7A47600097646C /* interpreter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = interpreter.cpp; sourceTree = "<group>"; };
+		D93CB9E91B7A47600097646C /* interpreter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = interpreter.h; sourceTree = "<group>"; };
+		D93CB9EB1B7BB6140097646C /* neuronmodel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = neuronmodel.cpp; sourceTree = "<group>"; };
+		D93CB9EC1B7BB6150097646C /* neuronmodel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neuronmodel.h; sourceTree = "<group>"; };
+		D9A7F5901B7C47C400D78916 /* hopfield.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hopfield.cpp; sourceTree = "<group>"; };
+		D9A7F5911B7C47C400D78916 /* hopfield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hopfield.h; sourceTree = "<group>"; };
+		D9A7F5931B7C685C00D78916 /* bmatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bmatrix.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D93CB9C51B7A430A0097646C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D93CB9BF1B7A430A0097646C = {
+			isa = PBXGroup;
+			children = (
+				D93CB9CA1B7A430A0097646C /* neuralnetworks */,
+				D93CB9C91B7A430A0097646C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D93CB9C91B7A430A0097646C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D93CB9C81B7A430A0097646C /* neuralnetworks */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D93CB9CA1B7A430A0097646C /* neuralnetworks */ = {
+			isa = PBXGroup;
+			children = (
+				D93CB9CB1B7A430A0097646C /* main.cpp */,
+				D93CB9E81B7A47600097646C /* interpreter.cpp */,
+				D93CB9E91B7A47600097646C /* interpreter.h */,
+				D93CB9DD1B7A43FF0097646C /* matrix.h */,
+				D9A7F5931B7C685C00D78916 /* bmatrix.h */,
+				D93CB9E31B7A46220097646C /* artificial */,
+				D93CB9EE1B7BB61A0097646C /* realistic */,
+			);
+			path = neuralnetworks;
+			sourceTree = "<group>";
+		};
+		D93CB9E31B7A46220097646C /* artificial */ = {
+			isa = PBXGroup;
+			children = (
+				D93CB9D91B7A43EA0097646C /* counterpropagation.cpp */,
+				D93CB9DA1B7A43EA0097646C /* counterpropagation.h */,
+				D93CB9DB1B7A43F30097646C /* backpropagation.cpp */,
+				D93CB9DC1B7A43F30097646C /* backpropagation.h */,
+				D9A7F5901B7C47C400D78916 /* hopfield.cpp */,
+				D9A7F5911B7C47C400D78916 /* hopfield.h */,
+			);
+			name = artificial;
+			sourceTree = "<group>";
+		};
+		D93CB9EE1B7BB61A0097646C /* realistic */ = {
+			isa = PBXGroup;
+			children = (
+				D93CB9EB1B7BB6140097646C /* neuronmodel.cpp */,
+				D93CB9EC1B7BB6150097646C /* neuronmodel.h */,
+			);
+			name = realistic;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D93CB9C71B7A430A0097646C /* neuralnetworks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D93CB9CF1B7A430A0097646C /* Build configuration list for PBXNativeTarget "neuralnetworks" */;
+			buildPhases = (
+				D93CB9C41B7A430A0097646C /* Sources */,
+				D93CB9C51B7A430A0097646C /* Frameworks */,
+				D93CB9C61B7A430A0097646C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = neuralnetworks;
+			productName = neuralnetworks;
+			productReference = D93CB9C81B7A430A0097646C /* neuralnetworks */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D93CB9C01B7A430A0097646C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Benjamin Bolte";
+				TargetAttributes = {
+					D93CB9C71B7A430A0097646C = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = D93CB9C31B7A430A0097646C /* Build configuration list for PBXProject "neuralnetworks" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D93CB9BF1B7A430A0097646C;
+			productRefGroup = D93CB9C91B7A430A0097646C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D93CB9C71B7A430A0097646C /* neuralnetworks */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D93CB9C41B7A430A0097646C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9A7F5921B7C47C400D78916 /* hopfield.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D93CB9CD1B7A430A0097646C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D93CB9CE1B7A430A0097646C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D93CB9D01B7A430A0097646C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D93CB9D11B7A430A0097646C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D93CB9C31B7A430A0097646C /* Build configuration list for PBXProject "neuralnetworks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D93CB9CD1B7A430A0097646C /* Debug */,
+				D93CB9CE1B7A430A0097646C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D93CB9CF1B7A430A0097646C /* Build configuration list for PBXNativeTarget "neuralnetworks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D93CB9D01B7A430A0097646C /* Debug */,
+				D93CB9D11B7A430A0097646C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D93CB9C01B7A430A0097646C /* Project object */;
+}
