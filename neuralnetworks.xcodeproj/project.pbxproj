@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D9A7F5921B7C47C400D78916 /* hopfield.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9A7F5901B7C47C400D78916 /* hopfield.cpp */; };
+		D90203D81B8ACB29002F1622 /* rate_encoded.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D93D50681B8132E400E56CC5 /* rate_encoded.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +34,11 @@
 		D93CB9E91B7A47600097646C /* interpreter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = interpreter.h; sourceTree = "<group>"; };
 		D93CB9EB1B7BB6140097646C /* neuronmodel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = neuronmodel.cpp; sourceTree = "<group>"; };
 		D93CB9EC1B7BB6150097646C /* neuronmodel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neuronmodel.h; sourceTree = "<group>"; };
+		D93D50651B80FB9400E56CC5 /* recurrent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = recurrent.cpp; sourceTree = "<group>"; };
+		D93D50661B80FB9400E56CC5 /* recurrent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recurrent.h; sourceTree = "<group>"; };
+		D93D50681B8132E400E56CC5 /* rate_encoded.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rate_encoded.cpp; sourceTree = "<group>"; };
+		D93D50691B8132E400E56CC5 /* rate_encoded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rate_encoded.h; sourceTree = "<group>"; };
+		D93D506B1B83BD0800E56CC5 /* models.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = models.h; sourceTree = "<group>"; };
 		D9A7F5901B7C47C400D78916 /* hopfield.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hopfield.cpp; sourceTree = "<group>"; };
 		D9A7F5911B7C47C400D78916 /* hopfield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hopfield.h; sourceTree = "<group>"; };
 		D9A7F5931B7C685C00D78916 /* bmatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bmatrix.h; sourceTree = "<group>"; };
@@ -89,6 +94,8 @@
 				D93CB9DC1B7A43F30097646C /* backpropagation.h */,
 				D9A7F5901B7C47C400D78916 /* hopfield.cpp */,
 				D9A7F5911B7C47C400D78916 /* hopfield.h */,
+				D93D50651B80FB9400E56CC5 /* recurrent.cpp */,
+				D93D50661B80FB9400E56CC5 /* recurrent.h */,
 			);
 			name = artificial;
 			sourceTree = "<group>";
@@ -98,6 +105,9 @@
 			children = (
 				D93CB9EB1B7BB6140097646C /* neuronmodel.cpp */,
 				D93CB9EC1B7BB6150097646C /* neuronmodel.h */,
+				D93D50681B8132E400E56CC5 /* rate_encoded.cpp */,
+				D93D50691B8132E400E56CC5 /* rate_encoded.h */,
+				D93D506B1B83BD0800E56CC5 /* models.h */,
 			);
 			name = realistic;
 			sourceTree = "<group>";
@@ -158,7 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9A7F5921B7C47C400D78916 /* hopfield.cpp in Sources */,
+				D90203D81B8ACB29002F1622 /* rate_encoded.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
